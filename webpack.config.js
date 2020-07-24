@@ -9,7 +9,8 @@ const path = require('path');
       exp: './src/exp.js'
     },
    plugins: [
-    new CleanWebpackPlugin(),
+     new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
      new HtmlWebpackPlugin({
        title: 'Output Management',
      }),

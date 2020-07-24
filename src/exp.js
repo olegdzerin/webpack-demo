@@ -1,4 +1,4 @@
 function exp(){
-    console.log('Чи буде цк в зборці');
+    console.log('Чи буде ц в зборці');
 };
 exp();
