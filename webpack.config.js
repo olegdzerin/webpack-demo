@@ -6,17 +6,22 @@ const path = require('path');
     entry: {
       app: './src/index.js',
       print: './src/print.js',
-      exp: './src/exp.js'
+      // exp: './src/exp.js'
     },
+    devtool: 'inline-source-map',
+    devServer: {
+           contentBase: './dist',
+         },
    plugins: [
-     new CleanWebpackPlugin(),
-    // new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+   //   new CleanWebpackPlugin(),
+     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
      new HtmlWebpackPlugin({
-       title: 'Output Management',
+       title: 'Development',
      }),
    ],
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
+   // publicPath: '/',
   };
